@@ -1,0 +1,70 @@
+<%= form_with(model: program) do |form| %>
+  <% if program.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(program.errors.count, "error") %> prohibited this program from being saved:</h2>
+
+      <ul>
+        <% program.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class='container'>
+  <div class="mb-3">
+    <%= form.label :semaine, class:'form-label' %>
+    <%= form.text_field :semaine, class:'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :num, class:'form-label'  %>
+    <%= form.number_field :num, class:'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :themeg, class:'form-label'  %>
+    <%= form.text_field :themeg, class:'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :objectif, class:'form-label'  %>
+    <%= form.text_field :objectif, class:'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :exercice1, class:'form-label'  %>
+    <%= form.text_field :exercice1, class:'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :description, class:'form-label'  %>
+    <%= form.text_area :description, class:'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :exercice2, class:'form-label'  %>
+    <%= form.text_field :exercice2, class:'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :description2, class:'form-label'  %>
+    <%= form.text_area :description2, class:'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :exerciceobj, class:'form-label'  %>
+    <%= form.text_field :exerciceobj, class:'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :descriptionobj, class:'form-label'  %>
+    <%= form.text_area :descriptionobj, class:'form-control' %>
+  </div>
+
+  
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<div class='container'> 
+
+<div class='container  shadow p-3 mb-5  rounded' style='background-color:  rgb(223, 177, 243);'>
+   <ul class='list-group'>
+   <li class='list-group-item'><h1><strong>Programme pour la semaine: </strong><span style='color: blue;'><%= @program.semaine %></span></h1></li> 
+   <li class='list-group-item'><h2><strong>Séance Numéro: </strong> <span style='color: blue;'><%= @program.num %></span></h2></li>
+   <li class='list-group-item'><h2><strong>Thème de l'entrainement: </strong> <span style='color: blue;'><%= @program.themeg %></span> </h2></li>
+   <li class='list-group-item'><h2><strong>Objectif: </strong> <span style='color: blue;'><%= @program.objectif %></span></h2></li>
+
+   </ul>
+</div>
+
+
+
+
+<div class='container shadow p-3 mb-5 bg-body rounded'>
+    <div class='container'>
+        <h1 class= 'text-center'>Plan de séance </h1>
+        <div class='card shadow p-3 mb-5 bg-body rounded'>
+           <div class='card-body'>
+                <h4>Echauffement </h4>
+                <p>Suivi de la division en deux groupes de nombres égales </p>
+                <p>temps : 15 min</p>
+            </div>
+        </div>
+        
+        <div class='card shadow p-3 mb-5 bg-body rounded'>
+            <div class='card-body'>
+                
+                <h5><span class='badge h3' style = 'background-color: paleturquoise;color: white;font-size: large;'>Exercice 1:</span> <%= @program.exercice1 %> </h5>
+                <p><strong style="color: green;">Description: </strong> <%= @program.description %></p>
+                <p>temps : 10 min par groupes </p>
+                
+            </div>
+        </div>
+         
+
+
+        <div class="card shadow p-3 mb-5 bg-body rounded">
+            <div class="card-body">
+                
+                <h5><span class='badge h3' style = 'background-color: paleturquoise;color: white;font-size: large;'>Exercice 2:</span> <%= @program.exercice2 %> </h5>
+                <p><strong style="color: green;">Description: </strong><%= @program.description2 %></p>
+                <p>temps : 10 min</p>
+            </div>
+        </div>
+
+
+        <div class="card shadow p-3 mb-5 bg-body rounded">
+            <div class="card-body">
+                
+                <p class ="h3"><span class='badge h3' style = 'background-color: rgb(236, 148, 16);color: white;font-size: large;'>Exercice objectif</span><%= @program.exerciceobj %></p>
+                <p><strong style="color: green;">Description: </strong><%= @program.descriptionobj %> </p>
+                <p>temps : 10 min</p>
+            </div>
+        </div>
+        
+        <h3><strong style='color: red;'>RETOUR AU CALME !!!</strong></h3>
+            <div class='card'>
+              <div class='card-body'>
+                <%= link_to 'MODIFIER', edit_program_path(@program),{:class =>'btn btn-primary'} %>
+                <%= link_to 'RETOUR', programs_path, {:class =>'btn btn-success'} %>
+              </div>
+            </div>
+      </div>
+</div>
+</div>
