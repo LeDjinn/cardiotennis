@@ -6,21 +6,21 @@
   <thead>
     <tr>
       
-      <th scope='col'>Num</th>
-      <th scope='col'>Theme</th>
-      <th scope='col'>Objectif</th>
+      <th scope='col'>Numero du cours</th>
+      <th scope='col'>Semaine</th>
+      <th scope='col'>Theme de la session</th>
       
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @programs.each do |program| %>
+    <% @programs.sort_by(&:num).each do |program| %>
       <tr>
         
         <td><%= program.num %></td>
+        <td><%= program.semaine %></td>
         <td><%= program.themeg %></td>
-        <td><%= program.objectif %></td>
         
         
         <td><%= link_to 'Voir', program, {:class=>'btn btn-warning'} %></td>
