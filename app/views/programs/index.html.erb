@@ -15,7 +15,7 @@
   </thead>
 
   <tbody>
-    <% @programs.sort_by(&:num).each do |program| %>
+    <% @programs.each do |program| %>
       <tr>
         
         <td><%= program.num %></td>
